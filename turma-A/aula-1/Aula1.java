@@ -14,6 +14,8 @@ public class Aula1 {
         System.out.print("Digite quantas peras você deseja: ");
         pera *= sc.nextInt();
 
+        sc.close();
+
         Double resultado = abacaxi + maca + pera;
         System.out.println("O valor da compra foi de R$ " + resultado);
     }
