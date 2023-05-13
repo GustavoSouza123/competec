@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class tictactoe {
+public class Tictactoe {
     public static void main(String[] args) {
         ArrayList<String> board = new ArrayList<String>();
         for(int i = 0; i < 9; i++) {
