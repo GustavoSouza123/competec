@@ -13,6 +13,14 @@ public class Tictactoe {
         }
         System.out.println("- - - - - - - -\n");
     }
+
+    public static boolean victoryX(ArrayList<String> arr, int id1, int id2, int id3) {
+        return arr.get(id1).equals("X") && arr.get(id2).equals("X") && arr.get(id3).equals("X");
+    }
+
+    public static boolean victoryO(ArrayList<String> arr, int id1, int id2, int id3) {
+        return arr.get(id1).equals("O") && arr.get(id2).equals("O") && arr.get(id3).equals("O");
+    }
     
     public static void main(String[] args) {
         // creating an array for the board and the scanner
@@ -66,20 +74,29 @@ public class Tictactoe {
                 }
             }
 
-            if(board.get(0) == "X" && board.get(1) == "X" && board.get(2) == "X" || 
-            board.get(3) == "X" && board.get(4) == "X" && board.get(5) == "X" || 
-            board.get(6) == "X" && board.get(7) == "X" && board.get(8) == "X" || 
-            board.get(0) == "X" && board.get(3) == "X" && board.get(6) == "X" || 
-            board.get(1) == "X" && board.get(4) == "X" && board.get(7) == "X" || 
-            board.get(2) == "X" && board.get(5) == "X" && board.get(8) == "X" || 
-            board.get(0) == "X" && board.get(4) == "X" && board.get(8) == "X" || 
-            board.get(2) == "X" && board.get(4) == "X" && board.get(6) == "X") {
-                System.out.println("O jogador " + ((player1Symb == "X") ? player1 : player2) + " ganhou");
+            if(victoryX(board, 0, 1, 2) || 
+            victoryX(board, 3, 4, 5) || 
+            victoryX(board, 6, 7, 8) || 
+            victoryX(board, 0, 3, 6) || 
+            victoryX(board, 1, 4, 7) || 
+            victoryX(board, 2, 5, 8) || 
+            victoryX(board, 0, 4, 8) || 
+            victoryX(board, 2, 4, 6)) {
+                System.out.println("O jogador " + ((playerMove == 2) ? player1 : player2) + " ganhou!");
                 victory++;
             }
-            // PAREI AQUI, FALTA FAZER VERIFICAÇÃO DE VITÓRIA PARA O JOGADOR (O)
-        }
 
-        sc.close();
+            if(victoryO(board, 0, 1, 2) || 
+            victoryO(board, 3, 4, 5) || 
+            victoryO(board, 6, 7, 8) || 
+            victoryO(board, 0, 3, 6) || 
+            victoryO(board, 1, 4, 7) || 
+            victoryO(board, 2, 5, 8) || 
+            victoryO(board, 0, 4, 8) || 
+            victoryO(board, 2, 4, 6)) {
+                System.out.println("O jogador " + ((playerMove == 2) ? player1 : player2) + " ganhou!");
+                victory++;
+            }
+        }
     }
 }
