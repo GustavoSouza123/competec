@@ -21,5 +21,7 @@ public class senha2 {
         } while(!accessAllowed);
 
         System.out.println("Acesso permitido");
+
+        sc.close();
     }
 }
