@@ -25,30 +25,24 @@ public class ddd {
             "Quem tá nesse estado não é bom, é arretado"
         };
         
+        // ínicio do programa
+        System.out.println("\nEntre com um DDD de um estado do Brasil");
+        System.out.println("Se o DDD digitado for válido, vai aparecer uma mensagem com gírias/estereótipos do estado correspondente ao DDD");
+        System.out.println("Sua tarefa é adivinhar o estado!");
+        System.out.println("Dica: digite apenas a sigla do estado\n");
+
         int input;
-        
         System.out.print("Entre com o DDD: ");
         input = sc.nextInt();
 
-        /*switch(ddd) {
-            case 11:
-                msg = "São Paulo";
-                break;
-            case 21:
-                msg = "Rio de Janeiro";
-                break;
-            case 31:
-                msg = "Minas Gerais";
-                break;
-            case 71:
-                msg = "";
-                break;
-            case 27:
-                msg = "";
-                break;
+        for(int i = 0; i < ddd.length; i++) {
+            if(input == ddd[i]) {
+                System.out.println(messages[i]);
+            } else {
+                System.out.println("DDD inválido, tente novamente");
+            }
+        }
 
-            default:
-                msg = "Erro";
-        }*/
+        sc.close();
     }
 }
