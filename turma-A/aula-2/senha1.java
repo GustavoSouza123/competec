@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class senha {
+public class senha1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         // criando uma senha
         String senha;
-        System.out.print("Crie uma senha: ");
+        System.out.print("\nCrie uma senha: ");
         senha = sc.nextLine();
 
         // verificação
