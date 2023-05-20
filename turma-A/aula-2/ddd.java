@@ -31,17 +31,19 @@ public class ddd {
         System.out.println("Sua tarefa é adivinhar o estado!");
         System.out.println("Dica: digite apenas a sigla do estado\n");
 
+        // lendo o DDD
         int input;
         System.out.print("Entre com o DDD: ");
         input = sc.nextInt();
 
+        int index = -1;
         for(int i = 0; i < ddd.length; i++) {
             if(input == ddd[i]) {
-                System.out.println(messages[i]);
-            } else {
-                System.out.println("DDD inválido, tente novamente");
+                index = i;
             }
         }
+
+        System.out.println(messages[index]);
 
         sc.close();
     }

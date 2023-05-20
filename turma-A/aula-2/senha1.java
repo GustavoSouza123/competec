@@ -6,13 +6,12 @@ public class senha1 {
 
         // criando uma senha
         String senha;
-        System.out.print("\nCrie uma senha: ");
+        System.out.print("Crie uma senha: ");
         senha = sc.nextLine();
 
         // verificação
         String input;
         boolean acessoPermitido = false;
-        System.out.println();
 
         while(!acessoPermitido) {
             System.out.print("Entre com a senha: ");
@@ -21,7 +20,7 @@ public class senha1 {
                 System.out.println("Acesso permitido!");
                 acessoPermitido = true;
             } else {
-                System.out.println("Senha inválida\n");
+                System.out.println("Senha inválida");
             }
         }
 
