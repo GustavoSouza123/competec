@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Tictactoe {
     
-    public static void imprimir(ArrayList<String> arr) {
+    public static void print(ArrayList<String> arr) {
         System.out.println("- - - - - - - -");
         for(int i = 0; i < arr.size(); i++) {
             System.out.print(" | " + arr.get(i));
@@ -11,7 +11,7 @@ public class Tictactoe {
                 System.out.print(" |\n");
             }
         }
-        System.out.println("- - - - - - - -\n");
+        System.out.println("- - - - - - - -");
     }
 
     public static boolean victoryX(ArrayList<String> arr, int id1, int id2, int id3) {
@@ -27,12 +27,11 @@ public class Tictactoe {
         ArrayList<String> board = new ArrayList<String>();
         Scanner sc = new Scanner(System.in);
         int i;
+
         // initializing the board
         for(i = 0; i < 9; i++) {
             board.add(".");
         }
-
-        imprimir(board);
 
         // players
         String player1, player2, player1Symb, player2Symb;
@@ -46,16 +45,18 @@ public class Tictactoe {
 
         // the game
         System.out.println("\nO jogo vai começar!");
-        System.out.println("O jogador 1 " + player1 + " é o " + player1Symb);
-        System.out.println("O jogador 2 " + player2 + " é o " + player2Symb);
-        System.out.println("O jogador 1 vai começar\n");
+        System.out.println("Jogador 1: "+player1+" - "+player1Symb);
+        System.out.println("Jogador 2: "+player2+" - "+player2Symb);
+        System.out.println("\nO jogador 1 vai começar");
 
-        int victory = 0;
+        boolean gameover = false;
         int playerMove = 1;
+        int numMoves = 0;
         int move;
-        while(victory == 0) {
+        while(!gameover) {
             int aux = 0;
             while(aux == 0) {
+                print(board);
                 System.out.println("Vez do " + ((playerMove == 1) ? player1 : player2) + " (" + ((playerMove == 1) ? player1Symb : player2Symb)  + ")");
                 System.out.print("Entre com a sua jogada (1-9): ");
                 move = sc.nextInt();
@@ -66,9 +67,9 @@ public class Tictactoe {
                     } else if(playerMove == 2) {
                         board.set(move-1, player2Symb);
                     }
-                    imprimir(board);
-                    aux++;
                     playerMove = (playerMove == 1) ? 2 : 1;
+                    numMoves++;
+                    aux++;
                 } else {
                     System.out.println("Erro, tente novamente");
                 }
@@ -82,8 +83,9 @@ public class Tictactoe {
             victoryX(board, 2, 5, 8) || 
             victoryX(board, 0, 4, 8) || 
             victoryX(board, 2, 4, 6)) {
+                print(board);
                 System.out.println("O jogador " + ((playerMove == 2) ? player1 : player2) + " ganhou!");
-                victory++;
+                gameover = true;
             }
 
             if(victoryO(board, 0, 1, 2) || 
@@ -94,8 +96,15 @@ public class Tictactoe {
             victoryO(board, 2, 5, 8) || 
             victoryO(board, 0, 4, 8) || 
             victoryO(board, 2, 4, 6)) {
+                print(board);
                 System.out.println("O jogador " + ((playerMove == 2) ? player1 : player2) + " ganhou!");
-                victory++;
+                gameover = true;
+            }
+            
+            if(numMoves == 9) {
+                print(board);
+                System.out.println("Deu velha...");
+                gameover = true;
             }
         }
     }
