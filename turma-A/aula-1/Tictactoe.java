@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Tictactoe {
-    
+
+    // prints the board
     public static void print(ArrayList<String> arr) {
         System.out.println("- - - - - - - -");
         for(int i = 0; i < arr.size(); i++) {
@@ -14,10 +15,12 @@ public class Tictactoe {
         System.out.println("- - - - - - - -");
     }
 
+    // verify the victory of the X player
     public static boolean victoryX(ArrayList<String> arr, int id1, int id2, int id3) {
         return arr.get(id1).equals("X") && arr.get(id2).equals("X") && arr.get(id3).equals("X");
     }
 
+    // verify the victory of the O player
     public static boolean victoryO(ArrayList<String> arr, int id1, int id2, int id3) {
         return arr.get(id1).equals("O") && arr.get(id2).equals("O") && arr.get(id3).equals("O");
     }
