@@ -1,0 +1,11 @@
+HashMaps:
+https://www.w3schools.com/java/java_hashmap.asp
+
+ArrayLists:
+https://www.w3schools.com/java/java_arraylist.asp
+
+ArrayList inside an ArrayList:
+https://www.geeksforgeeks.org/arraylist-of-arraylist-in-java/
+
+ArrayLists inside a HashMap:
+https://stackoverflow.com/questions/28069969/add-elements-in-arraylist-inside-hashmap
