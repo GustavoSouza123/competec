@@ -1,7 +1,7 @@
 import java.util.Scanner; // import the Scanner class
 import java.util.ArrayList; // import the ArrayList class
 
-public class maze {
+public class Maze {
     //  board size
     public static int boardXSize = 5;
     public static int boardYSize = 5;
