@@ -8,6 +8,9 @@ public class Game {
         // Scanner sc = new Scanner(System.in);
         int i;
 
+        // ArrayList for the board (y)
+        static ArrayList<ArrayList<Integer>> board = new ArrayList<ArrayList<Integer>>(boardYSize);
+
         // ArrayLists for x
         ArrayList<Integer> x1 = new ArrayList<Integer>();
         ArrayList<Integer> x2 = new ArrayList<Integer>();
