@@ -5,13 +5,10 @@ public class CircleArea {
         Scanner sc = new Scanner(System.in);
 
         double pi = 3.14159;
-        double R;
-        double A;
-
-        R = sc.nextDouble();
+        double R = sc.nextDouble();
+        double A = pi * (R * R);
+        
         sc.close();
-
-        A = pi * (R * R);
 
         System.out.printf("A=%.4f", A);
         System.out.println();
