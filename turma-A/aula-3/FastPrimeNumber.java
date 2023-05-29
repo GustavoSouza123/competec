@@ -1,3 +1,6 @@
+/*
+CODE THAT WENT WRONG:
+
 import java.util.Scanner;
 
 public class FastPrimeNumber {
@@ -20,6 +23,42 @@ public class FastPrimeNumber {
 
             System.out.println(prime);
             N--;
+        }
+
+        sc.close();
+    }
+}*/
+
+/* CODE THAT WENT RIGHT: */
+
+import java.util.Scanner;
+
+public class FastPrimeNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // number of test cases
+        int N = 0;
+        N = sc.nextInt();
+
+        // processing and output
+        int X, aux;
+        for(int i = 0; i < N; i++) {
+            X = sc.nextInt();
+            aux = 0;
+
+            if(X == 2) {
+                System.out.println("Prime");
+                continue;
+            }
+            
+            for(int j = 2; j < Math.sqrt(X)+1; j++) {
+                if(X % j == 0) aux++;
+                if(aux == 2) break;
+            }
+
+            if(aux > 0) System.out.println("Not Prime");
+            else System.out.println("Prime");
         }
 
         sc.close();
