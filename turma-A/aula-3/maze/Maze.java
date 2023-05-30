@@ -1,7 +1,7 @@
 import java.util.ArrayList; // import the ArrayList class
 
 public class Maze {
-    //  board size
+    // board size attributes
     private int boardXSize;
     private int boardYSize;
 
@@ -29,24 +29,24 @@ public class Maze {
     public void setBoardYSize(int boardYSize) {
         this.boardYSize = boardYSize;
     }
-
-    // add a value to a coordinate in the board
-    public void setBoard(ArrayList<ArrayList<Integer>> arr, int x, int y, int el) {
-        arr.get(boardYSize-y).set(x-1, el);
-    }
     
-    // create ArrayLists x and add values to them
+    // method for creating ArrayLists x and adding values to them
     public void addValues(ArrayList<ArrayList<Integer>> arr, ArrayList<Integer> x) {
         arr.add(x);
         for(int cont = 0; cont < boardXSize; cont++) {
             x.add(0);
         }
     }
+
+    // method for adding a value to a coordinate in the board
+    public void setBoard(ArrayList<ArrayList<Integer>> arr, int x, int y, int el) {
+        arr.get(boardYSize-y).set(x-1, el);
+    }
 }
 
 /*
 METHODS:
+- addValues(board, x1);
 - setBoard(arr, boardSize, x, y, el) method:
   ex: setBoard(board, boardYSize, 3, 3, 999);
-- addValues(board, x1);
 */
