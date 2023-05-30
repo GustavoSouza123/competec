@@ -2,7 +2,8 @@ package exercicio_02;
 
 public class Aplicacao {
 	public static void printLigado(Veiculo obj) {
-		if(obj.isLigado()) System.out.println("[veiculo ligado]"); else System.out.println("[veiculo desligado]");
+		if(obj.isLigado()) System.out.println("[veiculo ligado]");
+		else System.out.println("[veiculo desligado]");
 	}
 	
 	public static void main(String[] args) {
