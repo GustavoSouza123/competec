@@ -1,46 +1,36 @@
-// import java.util.Scanner; // import the Scanner class
+import java.util.Scanner; // import the Scanner class
 import java.util.ArrayList; // import the ArrayList class
 
 public class Game {
     // main method
     public static void main(String[] args) {
         // scanner and variables
-        // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int i;
+
+        // entering the board size
+        int inputBoardXSize, inputBoardYSize;
+        System.out.print("Entre com o tamanho do tabuleiro (x): ");
+        inputBoardXSize = sc.nextInt();
+        System.out.print("Entre com o tamanho do tabuleiro (y): ");
+        inputBoardYSize = sc.nextInt();
         
         // maze object
-        Maze maze1 = new Maze(5, 5);
+        Maze maze1 = new Maze(inputBoardXSize, inputBoardYSize);
         
-        // ArrayLists for x
-        // for(i = 0; i < maze1.getBoardXSize(); i++) {
-        //     ArrayList<Integer> x`i` new ArrayList<Integer>();
-        // }
-
-        // ArrayList<Integer> x1 = new ArrayList<Integer>();
-        // ArrayList<Integer> x2 = new ArrayList<Integer>();
-        // ArrayList<Integer> x3 = new ArrayList<Integer>();
-        // ArrayList<Integer> x4 = new ArrayList<Integer>();
-        // ArrayList<Integer> x5 = new ArrayList<Integer>();
-
-        // add values for x
-        for(i = 0; i < maze1.getBoardXSize(); i++) {
-            ArrayList<Integer> x = new ArrayList<Integer>();
+        // create ArrayLists for x an add values on them
+        for(i = 0; i < maze1.getBoardYSize(); i++) {
+            ArrayList<String> x = new ArrayList<String>();
             maze1.addValues(maze1.board, x);
         }
 
-        // maze1.addValues(maze1.board, x1);
-        // maze1.addValues(maze1.board, x2);
-        // maze1.addValues(maze1.board, x3);
-        // maze1.addValues(maze1.board, x4);
-        // maze1.addValues(maze1.board, x5);
+        // modify board
+        maze1.setBoard(maze1.board, 4, 7, "9");
 
-        // print ArrayList coords
-        maze1.setBoard(maze1.board, 5, 4, 999);
-        for(i = 0; i < maze1.getBoardXSize(); i++) {
-            System.out.println(maze1.getBoardXSize()-i + ": " + maze1.board.get(i));
-        }
+        // print board
+        maze1.printBoard();
 
-
-        // sc.close(); // close scanner
+        
+        sc.close(); // close scanner
     }
 }

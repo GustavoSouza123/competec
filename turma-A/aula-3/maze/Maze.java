@@ -6,7 +6,7 @@ public class Maze {
     private int boardYSize;
 
     // ArrayList for the board (y)
-    ArrayList<ArrayList<Integer>> board = new ArrayList<ArrayList<Integer>>(boardYSize);
+    ArrayList<ArrayList<String>> board = new ArrayList<ArrayList<String>>(boardYSize);
 
     // constructor
     public Maze(int boardXSize, int boardYSize) {
@@ -31,22 +31,40 @@ public class Maze {
     }
     
     // method for creating ArrayLists x and adding values to them
-    public void addValues(ArrayList<ArrayList<Integer>> arr, ArrayList<Integer> x) {
+    public void addValues(ArrayList<ArrayList<String>> arr, ArrayList<String> x) {
         arr.add(x);
         for(int cont = 0; cont < boardXSize; cont++) {
-            x.add(0);
+            x.add("-");
         }
     }
 
     // method for adding a value to a coordinate in the board
-    public void setBoard(ArrayList<ArrayList<Integer>> arr, int x, int y, int el) {
+    public void setBoard(ArrayList<ArrayList<String>> arr, int x, int y, String el) {
         arr.get(boardYSize-y).set(x-1, el);
+    }
+
+    // method for printing the board
+    public void printBoard() {
+        int i, j;
+        for(i = 0; i < boardYSize; i++) {
+            System.out.print(boardYSize-i + "    ");
+            for(j = 0; j < boardXSize; j++) {
+                if(j < boardXSize-1) System.out.print(board.get(i).get(j) + "  ");
+                else System.out.print(board.get(i).get(j) + "\n");
+            }
+        }
+        System.out.println();
+        System.out.print("     ");
+        for(i = 1; i <= boardXSize; i++) {
+            if(i < boardXSize) System.out.print(i + "  ");
+            else System.out.println(i);
+        }
     }
 }
 
 /*
 METHODS:
 - addValues(board, x1);
-- setBoard(arr, boardSize, x, y, el) method:
+- setBoard(arr, boardSize, x, y, el;
   ex: setBoard(board, boardYSize, 3, 3, 999);
 */
