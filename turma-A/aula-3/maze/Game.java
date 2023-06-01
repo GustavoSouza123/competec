@@ -8,6 +8,7 @@ public class Game {
         Scanner sc = new Scanner(System.in);
         int i;
 
+
         // entering the board size
         int inputBoardXSize, inputBoardYSize;
         System.out.print("Entre com o tamanho do tabuleiro (x): ");
