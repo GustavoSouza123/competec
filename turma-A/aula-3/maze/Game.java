@@ -8,7 +8,6 @@ public class Game {
         Scanner sc = new Scanner(System.in);
         int i;
 
-
         // entering the board size
         int inputBoardXSize, inputBoardYSize;
         System.out.print("Entre com o tamanho do tabuleiro (x): ");
@@ -39,7 +38,7 @@ public class Game {
             int randomObstacleX = (int)(Math.random() * maze1.getBoardXSize()) + 1;
             int randomObstacleY = (int)(Math.random() * maze1.getBoardYSize()-2) + 2;
 
-            if(maze1.board.get(maze1.getBoardYSize()-randomObstacleY).get(randomObstacleX-1).equals("-")) {
+            if(maze1.board.getBoard(randomObstacleX-1, maze1.getBoardYSize()-randomObstacleY).equals("-")) {
                 maze1.setBoard(randomObstacleX, randomObstacleY, "O");
                 i++;
             }

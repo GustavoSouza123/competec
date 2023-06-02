@@ -38,6 +38,11 @@ public class Maze {
         }
     }
 
+    // method for selecting a coordinate in the board
+    public void getBoard(int x, int y) {
+        board.get(boardYSize-y).get(x-1);
+    }
+
     // method for adding a value to a coordinate in the board
     public void setBoard(int x, int y, String el) {
         board.get(boardYSize-y).set(x-1, el);
