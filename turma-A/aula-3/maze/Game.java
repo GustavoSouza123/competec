@@ -26,17 +26,30 @@ public class Game {
         }
 
         // modify board
-        // add starting and final points
+        // generate starting and final points
         int startingPoint = (int)(Math.random() * maze1.getBoardXSize());
         int finalPoint = (int)(Math.random() * maze1.getBoardXSize());
-        maze1.setBoard(startingPoint, maze1.getBoardYSize(), "S");
-        maze1.setBoard(finalPoint, 1, "F");
+        maze1.setBoard(startingPoint+1, maze1.getBoardYSize(), "S");
+        maze1.setBoard(finalPoint+1, 1, "F");
+
+        // generate obstacles
+        int numObstacles = 10;
+        i = 0;
+        while(i < numObstacles) {
+            int randomObstacleX = (int)(Math.random() * maze1.getBoardXSize()) + 1;
+            int randomObstacleY = (int)(Math.random() * maze1.getBoardYSize()-2) + 2;
+
+            if(maze1.board.get(maze1.getBoardYSize()-randomObstacleY).get(randomObstacleX-1).equals("-")) {
+                maze1.setBoard(randomObstacleX, randomObstacleY, "O");
+                i++;
+            }
+        }
 
         // print board
         maze1.printBoard();
 
-        
-        sc.close(); // close scanner
+        // close scanner
+        sc.close();
     }
 }
 
