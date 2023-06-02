@@ -31,16 +31,16 @@ public class Maze {
     }
     
     // method for creating ArrayLists x and adding values to them
-    public void addValues(ArrayList<ArrayList<String>> arr, ArrayList<String> x) {
-        arr.add(x);
+    public void addValues(ArrayList<String> x) {
+        board.add(x);
         for(int cont = 0; cont < boardXSize; cont++) {
             x.add("-");
         }
     }
 
     // method for adding a value to a coordinate in the board
-    public void setBoard(ArrayList<ArrayList<String>> arr, int x, int y, String el) {
-        arr.get(boardYSize-y).set(x-1, el);
+    public void setBoard(int x, int y, String el) {
+        board.get(boardYSize-y).set(x-1, el);
     }
 
     // method for printing the board
@@ -64,7 +64,7 @@ public class Maze {
 
 /*
 METHODS:
-- addValues(board, x1);
-- setBoard(arr, boardSize, x, y, el;
-  ex: setBoard(board, boardYSize, 3, 3, 999);
+- addValues(x1);
+- setBoard(x, y, el);
+  ex: setBoard(3, 3, 999);
 */

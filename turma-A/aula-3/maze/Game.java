@@ -22,11 +22,15 @@ public class Game {
         // create ArrayLists for x an add values on them
         for(i = 0; i < maze1.getBoardYSize(); i++) {
             ArrayList<String> x = new ArrayList<String>();
-            maze1.addValues(maze1.board, x);
+            maze1.addValues(x);
         }
 
         // modify board
-        maze1.setBoard(maze1.board, 4, 7, "9");
+        // add starting and final points
+        int startingPoint = (int)(Math.random() * maze1.getBoardXSize());
+        int finalPoint = (int)(Math.random() * maze1.getBoardXSize());
+        maze1.setBoard(startingPoint, maze1.getBoardYSize(), "S");
+        maze1.setBoard(finalPoint, 1, "F");
 
         // print board
         maze1.printBoard();
@@ -35,3 +39,5 @@ public class Game {
         sc.close(); // close scanner
     }
 }
+
+// int randomNum = (int)(Math.random() * 101);  // 0 to 100
