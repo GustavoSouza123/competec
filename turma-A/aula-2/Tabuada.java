@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class tabuada {
+public class Tabuada {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
