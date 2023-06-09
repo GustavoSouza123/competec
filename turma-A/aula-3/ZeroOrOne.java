@@ -17,11 +17,8 @@ public class ZeroOrOne {
             }
 
             if(A > -1 && B > -1 && C > -1) {
-                if(A == B && A == C) {
-                    w = "*";
-                    System.out.println(w);
-                    break;
-                } else if(A != B && A != C) w = "A";
+                if(A == B && A == C) w = "*";
+                else if(A != B && A != C) w = "A";
                 else if(B != A && B != C) w = "B";
                 else if(C != A && C != B) w = "C";
 
