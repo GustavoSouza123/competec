@@ -5,6 +5,7 @@ public class Banknotes {
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
+        System.out.println(N);
 
         while(N > 0) {
             System.out.println(N/100 + " nota(s) de R$ 100,00");
