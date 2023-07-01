@@ -15,6 +15,7 @@ public class Vetor3 {
         for(int n : arr) System.out.print(n + " ");
         System.out.println();
 
+        /* // ordenar vetor
         int aux = 0;
         for(i = 0; i < arr.length; i++) {
             for(j = 0; j < arr.length; j++) {
@@ -32,5 +33,26 @@ public class Vetor3 {
 
         System.out.println("menor valor do vetor: " + arr[0]);
         System.out.println("maior valor do vetor: " + arr[arr.length-1]);
+        */
+
+        int maior = 0, maiorPosicao = 0, menor = 0; menorPosicao = 0;
+        // maior e menor valores do vetor
+        for(i = 0; i < arr.length; i++) {
+            for(j = i; j < arr.length; j++) {
+                if(arr[i] > arr[j]) {
+                    maior = arr[i];
+                    maiorPosicao = i;
+                }
+                if(arr[i] < arr[j]) {
+                    menor = arr[i];
+                    menorPosicao = i;
+                }
+            }
+        }
+
+        System.out.println("menor valor do vetor: " + menor);
+        System.out.println("posicao do menor valor do vetor: " + menorPosicao);
+        System.out.println("maior valor do vetor: " + maior);
+        System.out.println("posicao do maior valor do vetor: " + maiorPosicao);
     }
 }
