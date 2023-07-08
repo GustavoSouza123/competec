@@ -39,8 +39,8 @@ public class Maze {
     }
 
     // method for selecting a coordinate in the board
-    public void getBoard(int x, int y) {
-        board.get(boardYSize-y).get(x-1);
+    public String getBoard(int x, int y) {
+        return board.get(boardYSize-y).get(x-1);
     }
 
     // method for adding a value to a coordinate in the board

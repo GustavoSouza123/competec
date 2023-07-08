@@ -38,7 +38,7 @@ public class Game {
             int randomObstacleX = (int)(Math.random() * maze1.getBoardXSize()) + 1;
             int randomObstacleY = (int)(Math.random() * maze1.getBoardYSize()-2) + 2;
 
-            if(maze1.board.getBoard(randomObstacleX-1, maze1.getBoardYSize()-randomObstacleY).equals("-")) {
+            if(maze1.getBoard(randomObstacleX, randomObstacleY).equals("-")) {
                 maze1.setBoard(randomObstacleX, randomObstacleY, "O");
                 i++;
             }
