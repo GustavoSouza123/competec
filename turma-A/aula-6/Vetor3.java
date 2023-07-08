@@ -35,18 +35,16 @@ public class Vetor3 {
         System.out.println("maior valor do vetor: " + arr[arr.length-1]);
         */
 
-        int maior = 0, maiorPosicao = 0, menor = 0; menorPosicao = 0;
-        // maior e menor valores do vetor
+        // sem ordenar vetor
+        int maior = arr[0], maiorPosicao = 0, menor = arr[0], menorPosicao = 0;
         for(i = 0; i < arr.length; i++) {
-            for(j = i; j < arr.length; j++) {
-                if(arr[i] > arr[j]) {
-                    maior = arr[i];
-                    maiorPosicao = i;
-                }
-                if(arr[i] < arr[j]) {
-                    menor = arr[i];
-                    menorPosicao = i;
-                }
+            if(arr[i] > maior) {
+                maior = arr[i];
+                maiorPosicao = i;
+            }
+            if(arr[i] < menor) {
+                menor = arr[i];
+                menorPosicao = i;
             }
         }
 
