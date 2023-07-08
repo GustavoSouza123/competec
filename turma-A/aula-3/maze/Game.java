@@ -31,6 +31,8 @@ public class Game {
         maze1.setBoard(startingPoint+1, maze1.getBoardYSize(), "S");
         maze1.setBoard(finalPoint+1, 1, "F");
 
+        System.out.println("start: " + startingPoint + ", final: " + finalPoint);
+
         // generate obstacles
         int numObstacles = 10;
         i = 0;
@@ -46,6 +48,19 @@ public class Game {
 
         // print board
         maze1.printBoard();
+
+        // generate solution (PAREI AQUI)
+        ArrayList<Integer> solution = new ArrayList<Integer>();
+        String s = (startingPoint+1) + Integer.toString(5);
+        String e = (finalPoint+1) + Integer.toString(1);
+        int start = Integer.parseInt(s);
+        int end = Integer.parseInt(e);
+        System.out.println("start: " + start + ", end: " + end);
+        /*while(true) {
+            if(maze1.getBoard() == "-") {
+
+            }
+        }*/
 
         // close scanner
         sc.close();

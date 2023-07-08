@@ -22,7 +22,7 @@ public class Maze {
         return boardYSize;
     }
 
-    // setters for the board size
+    // setters for the board size (not necessary)
     public void setBoardXSize(int boardXSize) {
         this.boardXSize = boardXSize;
     }
