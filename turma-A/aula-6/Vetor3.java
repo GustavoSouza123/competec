@@ -18,7 +18,7 @@ public class Vetor3 {
         /* // ordenar vetor
         int aux = 0;
         for(i = 0; i < arr.length; i++) {
-            for(j = 0; j < arr.length; j++) {
+            for(j = i; j < arr.length; j++) {
                 if(arr[i] < arr[j]) {
                     aux = arr[i];
                     arr[i] = arr[j];
