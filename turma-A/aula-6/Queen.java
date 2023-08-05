@@ -14,9 +14,10 @@ public class Queen {
             moves = 0;
             } else if(x1 == x2 || y1 == y2) {
                 moves = 1;
-            } else if(x1 != x2 && y1 != y2) {
-                if((x1 - y1) % 2 == 0 && (x2 - y2) % 2 == 0) moves = 1;
-                else moves = 2;
+            } else if((x2-x1) == (y2-y1) || -(x2-x1) == -(y2-y1) || -(x2-x1) == (y2-y1) || (x2-x1) == -(y2-y1)) {
+                moves = 1;
+            } else {
+                moves = 2;
             }
             System.out.println(moves);
             x1 = sc.nextInt();
