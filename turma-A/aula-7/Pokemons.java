@@ -16,7 +16,7 @@ public class Pokemons {
             
             // ordenar pokemons
             for(i = 0; i < pk.length; i++) {
-                for(j = i; j < pk.length; j++) {
+                for(j = i+1; j < pk.length; j++) {
                     if(pk[i].compareToIgnoreCase(pk[j]) > 0) {
                         aux = pk[i];
                         pk[i] = pk[j];
@@ -35,6 +35,8 @@ public class Pokemons {
 
             n = sc.nextInt();
         }
+
+        sc.close();
     }
 }
 
