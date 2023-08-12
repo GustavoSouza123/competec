@@ -1,3 +1,5 @@
+// ESTÁ DANDO ERRO, TERMINAR
+
 import java.util.Scanner;
 
 public class Cinema {
