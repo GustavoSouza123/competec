@@ -21,7 +21,7 @@ public class Combiner {
                     res += strs[0].charAt(i);
                     res += strs[1].charAt(i);
                 }
-                for(i = strs[1].length()-strs[0].length()+1; i < strs[1].length(); i++) {
+                for(i = strs[1].length()-(strs[1].length()-strs[0].length()); i < strs[1].length(); i++) {
                     res += strs[1].charAt(i);
                 }
             } else if(strs[0].length() > strs[1].length()) {
@@ -29,7 +29,7 @@ public class Combiner {
                     res += strs[0].charAt(i);
                     res += strs[1].charAt(i);
                 }
-                for(i = strs[0].length()-strs[1].length()+1; i < strs[0].length(); i++) {
+                for(i = strs[0].length()-(strs[0].length()-strs[1].length()); i < strs[0].length(); i++) {
                     res += strs[0].charAt(i);
                 }
             } else {
