@@ -19,5 +19,7 @@ public class Vacina2 {
             quant = 0;
             N--;
         }
+
+        sc.close();
     }
 }
