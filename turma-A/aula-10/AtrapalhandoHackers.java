@@ -9,6 +9,7 @@ public class AtrapalhandoHackers {
         } else {
             System.out.println(str.charAt(str.length()-1) + str.substring(1, str.length()-1) + str.charAt(0));
         }
+        sc.close();
     }
 }
 
