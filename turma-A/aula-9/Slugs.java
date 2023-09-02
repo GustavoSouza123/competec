@@ -16,6 +16,7 @@ public class Slugs {
         	}
         	System.out.println(nivel);
         }
+		sc.close();
 	}
 	
 }
