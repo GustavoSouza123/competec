@@ -1,0 +1,5 @@
+OOP exercises:
+https://www3.ntu.edu.sg/home/ehchua/programming/java/j3f_oopexercises.html
+
+answers to these exercises:
+https://github.com/giakinh0823/java-programming-tutorial/blob/main/1.%20Exercises%20on%20Classes/Account.java
