@@ -12,5 +12,7 @@ public class TwoPiece {
         Frutas frutas = new Frutas(n);
         double conversao = frutas.converterFrutas(moeda);
         System.out.println(frutas.getNumFrutas() + " frutas = " + ((conversao == 0) ? "erro" : conversao));
+
+        sc.close();
     }
 }
